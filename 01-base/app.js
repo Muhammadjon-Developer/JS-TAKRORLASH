@@ -54,7 +54,7 @@
 // // let num2 = num + (10 * 2) / 5 - 1; //& Answer: how in math and same in js: 50 + (10 * 2) / 5 - 1 = 53
 // // console.log(num2); //& Answer: 53
 
-// const firstName = "Muhammadjon";
+// const firstName = "Muhammadjon"
 // const secondName = "Olimov";
 
 // const fullName = firstName + " " + secondName; //& Answer: Muhammadjon + Olimov = Muhammadjon Olimov | " " = the space
@@ -78,7 +78,7 @@ console.log(resultElement.textContent); */
 
 // const sum = Number(input1.value) + Number(input2.value); //& Number - to make any type of element to number type
 // resultElement.textContent = sum;
-console.log(typeof sum); //& to check type of element or element in some variable
+// console.log(typeof sum); //& to check type of element or element in some variable
 
 plusBtn.onclick = () => {
   action = "+";
@@ -126,3 +126,5 @@ submitBtn.onclick = () => {
   //   printResult(sum);
   // }
 };
+
+
