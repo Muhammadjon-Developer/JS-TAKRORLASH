@@ -123,7 +123,7 @@ submitBtn.onclick = () => {
   // } else {
   //   //& onlick function when we click to btn | () => - arrow function instaed we also can use simple function()
   //   const sum = Number(input1.value) - Number(input2.value);
-  //   printResult(sum);
+  //   printResult(sum); 
   // }
 };
 

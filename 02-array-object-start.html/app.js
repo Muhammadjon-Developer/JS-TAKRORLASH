@@ -24,20 +24,91 @@ const listElement = document.getElementById("list");
 
 // console.log(inputElement.value);
 
-const notes = ["Do Homework", "Create a project", "Go to walk"];
+// const notes = ["Сделать д.з", "Создать проект", "Погулять"];
+
+// function render() {
+//   // for (let i = 0; i < notes.length; i++) {
+//   //   listElement.insertAdjacentHTML(
+//   //     "beforeend",
+//   //     getNoteTemplate(notes[i])
+//   //   );
+//   // }
+//   for (let note of notes) {
+//     listElement.insertAdjacentHTML("beforeend", getNoteTemplate(note));
+//   }
+// }
+
+// render();
+
+// createBtn.onclick = () => {
+//   if (inputElement.value.length === 0) {
+//     return;
+//   }
+//   // listElement.innerHTML =
+//   listElement.insertAdjacentHTML(
+//     "beforeend",
+//     getNoteTemplate(inputElement.value)
+//   );
+//   inputElement.value = "";
+// };
+
+// function getNoteTemplate(title) {
+//   return `<li class="list-group-item d-flex justify-content-between align-items-center">
+//       <span>${title}</span>
+//       <span>
+//         <span class="btn btn-small btn-success">&check;</span>
+//         <span class="btn btn-small btn-danger">&times;</span>
+//       </span>
+//     </li>`;
+// }
+
+/* Object Theory
+
+const myBro = {
+  firstName: "Abdulaziz",
+  lastName: "Olimov",
+  year: 2013,
+  hasFriend: false,
+  languages: ["uz", "ru"],
+  getFullName: () => {
+    console.log(myBro.firstName + " " + myBro.lastName);
+  },
+};
+
+console.log(myBro) // getting full object
+console.log(myBro.year) // getting element of object
+console.log(myBro['year']) // getting element of object second method
+
+const key = 'hasFriend';
+console.log(myBro[key]); // getting element of object another method  
+myBro.hasFriend = true;
+console.log(myBro[key]);
+myBro.getFullName();
+
+// console.log(typeof myBro); object */
+
+const notes = [
+  {
+    title: "Сделать д.з",
+    completed: true,
+  },
+  {
+    title: "Создать проект",
+    completed: false,
+  },
+  {
+    title: "Погулять",
+    completed: false,
+  },
+];
 
 function render() {
-  // for (let i = 0; i < notes.length; i++) {
-  //   listElement.insertAdjacentHTML(
-  //     "beforeend",
-  //     getNoteTemplate(notes[i])
-  //   );
-  // }
-  for (let note of notes) {
-    listElement.insertAdjacentHTML(
-      "beforeend",
-      getNoteTemplate(note)
-    );
+  listElement.innerHTML = "";
+  if (notes.length === 0) {
+    listElement.innerHTML = '<p>Нет элементов<p/>'
+  }
+  for (let i = 0; i < notes.length; i++) {
+    listElement.insertAdjacentHTML("beforeend", getNoteTemplate(notes[i], i));
   }
 }
 
@@ -47,20 +118,40 @@ createBtn.onclick = () => {
   if (inputElement.value.length === 0) {
     return;
   }
-  // listElement.innerHTML =
-  listElement.insertAdjacentHTML(
-    "beforeend",
-    getNoteTemplate(inputElement.value)
-  );
+  const newNote = {
+    title: inputElement.value,
+    completed: false,
+  };
+  notes.push(newNote); // push method that ads a new element to end of array
+  render();
   inputElement.value = "";
 };
 
-function getNoteTemplate(title) {
+listElement.onclick = (event) => {
+  if (event.target.dataset.index) {
+    const index = parseInt(event.target.dataset.index); // parseInt is also same method with Number that makes type of something to number
+    const type = event.target.dataset.type;
+
+    if (type === "toggle") {
+      notes[index].completed = !notes[index].completed;
+    } else if (type === "remove") {
+      notes.splice(index, 1);
+    }
+
+    render();
+  }
+};
+
+function getNoteTemplate(note, index) {
   return `<li class="list-group-item d-flex justify-content-between align-items-center">
-      <span>${title}</span>
+      <span class="${note.completed ? "text-decoration-line-through" : ""}">${
+    note.title
+  }</span>
       <span>
-        <span class="btn btn-small btn-success">&check;</span>
-        <span class="btn btn-small btn-danger">&times;</span>
+        <span class="btn btn-small btn-${
+          note.completed ? "warning" : "success"
+        }" data-index="${index}" data-type="toggle">&check;</span>
+        <span class="btn btn-small btn-danger" data-index="${index}" data-type="remove">&times;</span>
       </span>
     </li>`;
 }
