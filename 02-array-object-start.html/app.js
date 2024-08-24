@@ -1,20 +1,20 @@
 /* Theory
 
-index in arrays starts count from 0
+massida index lar 0 dan boshlab sanaladi
     INDEX:     0  1  2  2  4  5  6  7  8   9
-const array = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]; first method to create an array
+const array = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]; masssiv yaratishning birinchi usuli
 const arrayStrings = ["a", "b", "c", "d", "e", "f", "g"];
 const arrayAnyTypes = ["a", "b", "c", 1, 2, 3, 4, null, true, NaN, false];
-const newArray = new Array("Apple", "Mercedes cls63", 68, false);  how to create an array with a second way but usually arrays are created by the first method
+const newArray = new Array("Apple", "Mercedes cls63", 68, false);  massiv yaratishning ikkinchi usuli lekin ko'pincha massivlar birinchi metoddam foydalangan holda yaratiladi
 console.log(array);
 console.log(arrayStrings);
-console.log(array.length); how to get a length of an array
+console.log(array.length); massivning length ni olish
 
 console.log(array[5]); = 6
-console.log(array[10]);  because the element with index 10 is not in our array
-console.log(array[array.length - 1]); // how to get the last element of array = array[11 - 1]
-array[0] = "Hello!"; // How to change the first element in array
-array[array.length] = "World!"; // How to add a new element to end of an array BUT DON'T USE THIS 
+console.log(array[10]);  chunki 10-chi index li element bizning massivimizda yo'q
+console.log(array[array.length - 1]); // massivning ohirgi elementini olish = array[11 - 1]
+array[0] = "Hello!"; // massivning boshidagi elementni o'zgartirish
+array[array.length] = "World!"; // Massiv ohiriga element qo'shish ammo bundan foydalanmang
 console.log(array); 
  */
 
@@ -75,12 +75,12 @@ const myBro = {
   },
 };
 
-console.log(myBro) // getting full object
-console.log(myBro.year) // getting element of object
-console.log(myBro['year']) // getting element of object second method
+console.log(myBro) // butun obyektni olish
+console.log(myBro.year) // obyekt elementini olish
+console.log(myBro['year']) // obyekt elementini olish 2-chi metod
 
 const key = 'hasFriend';
-console.log(myBro[key]); // getting element of object another method  
+console.log(myBro[key]); // obyekt elementini olish boshqa metod
 myBro.hasFriend = true;
 console.log(myBro[key]);
 myBro.getFullName();
@@ -122,14 +122,14 @@ createBtn.onclick = () => {
     title: inputElement.value,
     completed: false,
   };
-  notes.push(newNote); // push method that ads a new element to end of array
+  notes.push(newNote); // push metodi massivning ohiriga yangi element qo'shadi
   render();
   inputElement.value = "";
 };
 
 listElement.onclick = (event) => {
   if (event.target.dataset.index) {
-    const index = parseInt(event.target.dataset.index); // parseInt is also same method with Number that makes type of something to number
+    const index = parseInt(event.target.dataset.index); // parseInt Number bilan bir-xil lyuboy type ni number type piga otkazadi
     const type = event.target.dataset.type;
 
     if (type === "toggle") {
