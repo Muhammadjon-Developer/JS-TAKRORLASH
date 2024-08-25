@@ -34,10 +34,16 @@ const strFloat = '16.44';
 // console.log(+strInt, +strFloat); // String ni number ga o'tkazish yanabir turi yoniga + yozib qo'yish kerak
 
 // console.log(0.1 + 0.2); // = 0.30000000000000004 biz buni yaxlidlashimiz kerak 
-const fixed = (0.1 + 0.2).toFixed(1)
-console.log(+fixed); // toFixed() - bu metod bizga nuqtadan keyin qancha raqam qolishini yozamiz lekin toFixed() bizga doim string ma'lumot qaytaradi shuninng uchun misol oldiga + yozib qo'ysak u songa aylanadi
+// const fixed = (0.1 + 0.2).toFixed(1)
+// console.log(+fixed); // toFixed() - bu metod bizga nuqtadan keyin qancha raqam qolishini yozamiz lekin toFixed() bizga doim string ma'lumot qaytaradi shuninng uchun misol oldiga + yozib qo'ysak u songa aylanadi
 
 
 
-
-
+// BigInt
+// console.log(BigInt(Number.MAX_SAFE_INTEGER) + 976546846546165n); // BigInt type bu tip juda katta bo'lgan raqamlar bilan ishlash uchun kerak bo'ladi biz uni biron bir katta son ga o'rab qo'yamiz va qo'shayotgan sonimizning ohiriga n harfini yozib qo'yamiz chunki number va BigInt boshqa-boshqa data type lar 
+// console.log(typeof -62n); // BigInt negative ham bo'lishi mumkin bu ALOHIDA DATA TYPE HISOBLANADI
+// // console.log(65.26n); // BigInt float yani o'nlik kasr sonlar bilan ishlayolmaydi
+// console.log(16n - 5); // BigInt integer yani oddiy butun sonlar bilan ham ishlayolmaydi
+// console.log(parseInt(16n - 5)); // Agar BigInt ni integer bilan ishlatmoqchi bo'lsak BigInt ni parseInt metodini qo'llashmiz kerak uni oddiy songa o'tkazish uchun
+// console.log(16n - BigInt(5)); // agar yuqoridagi kodni o'zgartirib bigint bilan ishlatmoqchi bo'lgan integerimizni BigInt ga aylantirsak bo'ladi
+// console.log(5n / 2n); // BigInt yani BigInteger agar biz uni bo'lsak u faqat bizga integer yani buton sonni ko'rsatadi
