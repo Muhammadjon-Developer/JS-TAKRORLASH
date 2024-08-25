@@ -47,28 +47,28 @@ const strFloat = "16.44";
 
 // Math
 
-const myNum = 10.9;
-const round = 10.5;
-const round2 = 10.2;
+// const myNum = 10.9;
+// const round = 10.5;
+// const round2 = 10.2;
 
-// console.log(Math.E); // Logarifmning asosi bo'lib, taxminan 2.718 ga teng.
-// console.log(Math.PI); // π - pi sonining qiymati = 3.14...
-// console.log(Math.sqrt(25)); // 25 ning kvadrat ildizini olish
-// console.log(Math.pow(3, 6)); // pow() - Darajaga ko'tarish birinchi raqam bu darajaga ko'tarishimiz kerak bo'lgan raqam, ikkinchisi esa birinchi raqam darajasi
-// console.log(Math.abs(-56)); // abs() - Sonning modulini qaytaradi
-// console.log(Math.max(63, 5, 45, 52, 188, 96, 124)); // max() - Lyuboy sonlarning eng kattasini qaytaradi
-// console.log(Math.min(63, 5, 45, 52, 188, 96, 124)); // min() - Lyuboy sonlarning eng kichigini qaytaradi
-// console.log(Math.floor(myNum)); // floor() - Lyuboy sonni kichik tarafga yaxlitlaydi = 10.9 = 10
-// console.log(Math.ceil(myNum)); // ceil() - Lyuboy sonni katta tarafga yaxlitlaydi = 10.9 = 11
-// console.log(Math.round(myNum)); // round() - Lyuboy sonni eng yaqin butun songa yaxlitlaydi = 10.9 = 11
-// console.log(Math.round(round)); // 11
-// console.log(Math.round(round2));  // 10
-// console.log(Math.trunc(myNum)); // trunc() - Bu metod sonning butun qismini ajratib oladi, kasr qismini esa tashlab yuboradi
-// console.log(Math.random()); // random() - Bu metod 0 va 1 orasidagi tasodifiy kasr sonni qaytaradi.
+// // console.log(Math.E); // Logarifmning asosi bo'lib, taxminan 2.718 ga teng.
+// // console.log(Math.PI); // π - pi sonining qiymati = 3.14...
+// // console.log(Math.sqrt(25)); // 25 ning kvadrat ildizini olish
+// // console.log(Math.pow(3, 6)); // pow() - Darajaga ko'tarish birinchi raqam bu darajaga ko'tarishimiz kerak bo'lgan raqam, ikkinchisi esa birinchi raqam darajasi
+// // console.log(Math.abs(-56)); // abs() - Sonning modulini qaytaradi
+// // console.log(Math.max(63, 5, 45, 52, 188, 96, 124)); // max() - Lyuboy sonlarning eng kattasini qaytaradi
+// // console.log(Math.min(63, 5, 45, 52, 188, 96, 124)); // min() - Lyuboy sonlarning eng kichigini qaytaradi
+// // console.log(Math.floor(myNum)); // floor() - Lyuboy sonni kichik tarafga yaxlitlaydi = 10.9 = 10
+// // console.log(Math.ceil(myNum)); // ceil() - Lyuboy sonni katta tarafga yaxlitlaydi = 10.9 = 11
+// // console.log(Math.round(myNum)); // round() - Lyuboy sonni eng yaqin butun songa yaxlitlaydi = 10.9 = 11
+// // console.log(Math.round(round)); // 11
+// // console.log(Math.round(round2));  // 10
+// // console.log(Math.trunc(myNum)); // trunc() - Bu metod sonning butun qismini ajratib oladi, kasr qismini esa tashlab yuboradi
+// // console.log(Math.random()); // random() - Bu metod 0 va 1 orasidagi tasodifiy kasr sonni qaytaradi.
 
-function getRandomNumber(min, max) {
-  return Math.floor(Math.random() * (max - min + 1) + min);
-}
+// function getRandomNumber(min, max) {
+//   return Math.floor(Math.random() * (max - min + 1) + min);
+// }
 
-const num1 = getRandomNumber(10, 100);
-console.log(num1);
+// const num1 = getRandomNumber(10, 100);
+// console.log(num1);
