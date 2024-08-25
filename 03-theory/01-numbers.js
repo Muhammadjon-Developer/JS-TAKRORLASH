@@ -27,15 +27,15 @@ const strFloat = '16.44';
 
 // console.log(Number(strInt)); // String Number type ga o'tkazish
 // console.log(Number(strFloat)); // String Number type ga o'tkazish
-console.log(Number.parseInt(strInt)); // bu usul parseInt() Number bilan yozish String Number type ga o'tkazish
-console.log(parseInt(strInt)); // bu usul parseInt() String Number type ga o'tkazish Number deb yozmasak ham ishlayveradi parseInt
-console.log(parseInt(strFloat)); // bu usul parseInt() String Number type ga o'tkazish ammo u o'nlik kasr ni faqat butun sonini ko'rsatadi
-console.log(parseFloat(strFloat)); // bu usul parseFloat() String Number type ga o'tkazish ammo endi biz o'nlik kasr ni to'liq olamiz
+// console.log(Number.parseInt(strInt)); // Bu usul parseInt() Number bilan yozish String Number type ga o'tkazish
+// console.log(parseInt(strInt)); // Bu usul parseInt() String Number type ga o'tkazish Number deb yozmasak ham ishlayveradi parseInt
+// console.log(parseInt(strFloat)); // Bu usul parseInt() String Number type ga o'tkazish ammo u o'nlik kasr ni faqat butun sonini ko'rsatadi
+// console.log(parseFloat(strFloat)); // Bu usul parseFloat() String Number type ga o'tkazish ammo endi biz o'nlik kasr ni to'liq olamiz
+// console.log(+strInt, +strFloat); // String ni number ga o'tkazish yanabir turi yoniga + yozib qo'yish kerak
 
-
-
-
-
+// console.log(0.1 + 0.2); // = 0.30000000000000004 biz buni yaxlidlashimiz kerak 
+const fixed = (0.1 + 0.2).toFixed(1)
+console.log(+fixed); // toFixed() - bu metod bizga nuqtadan keyin qancha raqam qolishini yozamiz lekin toFixed() bizga doim string ma'lumot qaytaradi shuninng uchun misol oldiga + yozib qo'ysak u songa aylanadi
 
 
 
