@@ -129,7 +129,7 @@ createBtn.onclick = () => {
 
 listElement.onclick = (event) => {
   if (event.target.dataset.index) {
-    const index = parseInt(event.target.dataset.index); // parseInt Number bilan bir-xil lyuboy type ni number type piga otkazadi
+    const index = parseInt(event.target.dataset.index); // parseInt Number obyekti bilan bir-xil lyuboy type ni number type piga otkazadi
     const type = event.target.dataset.type;
 
     if (type === "toggle") {

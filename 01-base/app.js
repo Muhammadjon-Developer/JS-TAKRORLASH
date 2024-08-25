@@ -76,7 +76,7 @@ let action = "+";
 resultElement.textContent = 50;
 console.log(resultElement.textContent); */
 
-// const sum = Number(input1.value) + Number(input2.value); // Number - lyuboy boshqa type elementini number type ga o'tkazish metodi
+// const sum = Number(input1.value) + Number(input2.value); // Number - bu js obyekti lyuboy boshqa type elementini number type ga o'tkazish metodi
 // resultElement.textContent = sum;
 // console.log(typeof sum); // typeof - biron-bir elemnt type ni tekshirish uchun
 
