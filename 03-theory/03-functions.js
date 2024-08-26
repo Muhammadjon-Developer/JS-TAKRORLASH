@@ -64,12 +64,12 @@
 
 // Yopilishlar
 
-function createPerson(name) {
-  return (lastName) => {
-    console.log(name + "" + lastName); 
-  }
-}
+// function createPerson(name) {
+//   return (lastName) => {
+//     console.log(name + " " + lastName); 
+//   }
+// }
 
-const addLastName = createPerson('Abdulaziz');
-addLastName("Olimov");
-addLastName("Yoqumov");
+// const addLastName = createPerson('Abdulaziz');
+// addLastName("Olimov");
+// addLastName("Yoqumov");
