@@ -29,18 +29,18 @@
 // console.log(sum(42, 8));
 // console.log(sum());
 
-function sumAll(...numbers) {
-  // ... - rest sintaksisi biz yozgan numbers esa argumentlarimiz joylashadigan massiv nomi
-  // let res = 0;
-  // for (let num of numbers) {
-  //   res += num;
-  // }
-  // return res;
+// function sumAll(...numbers) {
+//   // ... - rest sintaksisi biz yozgan numbers esa argumentlarimiz joylashadigan massiv nomi
+//   // let res = 0;
+//   // for (let num of numbers) {
+//   //   res += num;
+//   // }
+//   // return res;
 
-  return numbers.reduce((acc, cur) => (acc += cur), 0);
-}
+//   return numbers.reduce((acc, cur) => (acc += cur), 0);
+// }
 
-console.log(sumAll(1, 5, 6, 7, 8, 12, 30, 25));
+// console.log(sumAll(1, 5, 6, 7, 8, 12, 30, 25));
 
 // setTimeout() - setTimeout() Funksiyasi ma'lum bir kechikishdan so'ng bir marta bajarilishi kerak bo'lgan kodni (funksiyani) ishga tushirish uchun ishlatiladi
 // clearTimeout() - clearTimeout() funksiyasi avval setTimeout() bilan o‘rnatilgan taymerni bekor qiladi. Ya'ni, taymerni to‘xtatib, belgilangan kodni bajarilishining oldini oladi
@@ -59,3 +59,17 @@ console.log(sumAll(1, 5, 6, 7, 8, 12, 30, 25));
 //     console.log(++counter);
 //   }
 // }, 1000);
+
+
+
+// Yopilishlar
+
+function createPerson(name) {
+  return (lastName) => {
+    console.log(name + "" + lastName); 
+  }
+}
+
+const addLastName = createPerson('Abdulaziz');
+addLastName("Olimov");
+addLastName("Yoqumov");
