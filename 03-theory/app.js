@@ -1,3 +1,5 @@
+"use strict";
+
 const output = document.getElementById("output");
 const fullBtn = document.getElementById("full");
 const dateBtn = document.getElementById("date");
@@ -16,12 +18,11 @@ function update() {
 
 // Qisqa tutashuv funksiyasi - замыкание
 function bindMode(name) {
-  return () => {
+  return () => { 
     mode = name;
     update();
   }
 }
-
 
 fullBtn.onclick = bindMode("full");
  

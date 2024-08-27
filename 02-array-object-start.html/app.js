@@ -1,3 +1,5 @@
+"use strict";
+
 /* Theory
 
 massida index lar 0 dan boshlab sanaladi

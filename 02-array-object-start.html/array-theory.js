@@ -1,3 +1,5 @@
+"use strict";
+
 // const names = ["Muhammadjon", "Nurbek", "Muhammadali", "Mirzohid"];
 
 // names.push("Abdulaziz"); // push metodi massivning ohiriga element qo'shadi

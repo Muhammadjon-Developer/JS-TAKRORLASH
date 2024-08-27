@@ -1,3 +1,5 @@
+"use strict";
+
 // console.log(new Date()) // Vaqt va kunni olish
 
 const now = new Date();

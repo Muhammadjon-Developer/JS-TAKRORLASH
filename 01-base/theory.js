@@ -1,3 +1,5 @@
+"use strict";
+
 // Operators
 
 let a = 5;

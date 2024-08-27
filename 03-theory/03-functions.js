@@ -1,3 +1,5 @@
+"use strict";
+
 // // Function Declaration - funksiya e'lon qilingan qatordan yuqorida ishlaydi
 // function greet(name) {
 //   console.log("Hello - ", name);

@@ -1,3 +1,5 @@
+"use strict";
+
 const num = 10; // Integer - butun son
 const float = 7.5; // Float - o'nlik kasr son
 const pow = 10e3; // Bu lyuboy sonini nechanchidir darajasini yozish = 10000
