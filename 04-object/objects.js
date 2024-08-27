@@ -30,5 +30,52 @@ const person = {
 // person.arrow(); // Object ichidagi funksiyani ishlatish
 // person.info();
 
-console.log(person.address); // person obyektindan biron-bir key+value ni olish
-console.log(person["address"]); // person obyektindan biron-bir key+value ni olish 2-chi metod
+// console.log(person.address); // person obyektindan biron-bir key+value ni olish
+// console.log(person["address"]); // person obyektindan biron-bir key+value ni olish 2-chi metod
+
+// Obyektning ichidagi qiymatlarini o'zgartirish mumkin
+// person.age++; // + 1
+// console.log(person.age); // 15
+
+// person.languages.push("de");
+// console.log(person.languages);
+
+// Kalitlarni o'chirish
+// person.address = undefined; // biz shunchaki kalitni qiymatini o'zgartirdik bunday qilish mumkin lekin bu HATO
+// console.log(person); // undefined
+
+// delete person.address; // tak-tugi bilan o'chirish
+// console.log(person); // address o'chib ketgan
+
+// Destuctoring
+// const age = person.age;
+// const name = person.name;
+// const languages = person.languages;
+// console.log(age, name, languages);
+
+// const name = "John";
+
+// const { age, name: firstName = "TEST", languages } = person;
+// console.log(age, firstName, languages);
+
+// Obyektlar itaratsiyasi
+
+// for (let key in person) {
+//   if (person.hasOwnProperty(key)) {
+//     // prototipga kir masiligi uchun
+//     console.log(person[key]);
+//   }
+// }
+
+// console.dir(Object); // Object - базовый obyekt, obyektlar bilan ishlash uchun kerakli metodlar bor Object global obyektida
+
+// Object.keys(person).forEach((key) => {
+//   console.log(person[key]);
+// });
+
+
+const logger = {
+  keys() {
+    console.log("Object keys: ", Object.keys(this))
+  }
+}
