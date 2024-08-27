@@ -73,22 +73,22 @@ const person = {
 //   console.log(person[key]);
 // });
 
-const logger = {
-  keys(withText = true) {
-    if (withText) {
-      console.log("Object keys:", Object.keys(this));
-    }else {
-      console.log(Object.keys(this)); 
-    }
-  },
+// const logger = {
+//   keys(withText = true) {
+//     if (withText) {
+//       console.log("Object keys:", Object.keys(this));
+//     } else {
+//       console.log(Object.keys(this));
+//     }
+//   },
 
-  keysAndValues() {
-    Object.keys(this).forEach((key) => {
-      console.log("Key:", key);
-      console.log("Value:", this[key]);
-    });
-  },
-};
+//   keysAndValues() {
+//     Object.keys(this).forEach((key) => {
+//       console.log("Key:", key);
+//       console.log("Value:", this[key]);
+//     });
+//   },
+// };
 
 // logger.keys();
 // logger.keysAndValues();
@@ -97,3 +97,28 @@ const logger = {
 // bound(false);
 // logger.keys.call(person, false);
 // logger.keys.apply(person, [false]);
+
+// Sinflar va meros
+class Human {
+  isHuman = true
+}
+
+class Person extends Human { // Humandan meros bo'lsa
+  constructor(name, age) {
+    super() // Ota constructor ni chaqirish funksiyasi
+    this.name = name ?? "Undefined name"; // ?? agar name berilmagan bo'lsa
+    this.age = age ?? "Undefined age";
+  }
+
+  sayHello() {
+    console.log("Hello from", this.name);
+  }
+}
+
+const person1 = new Person('Oybek', 14);
+const person2 = new Person('Muhammadjon', 14);
+// console.log(person1);
+// console.log(person2);
+// person1.sayHello();
+// person2.sayHello();
+console.log(person1.isHuman); 
