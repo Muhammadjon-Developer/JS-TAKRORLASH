@@ -73,9 +73,27 @@ const person = {
 //   console.log(person[key]);
 // });
 
-
 const logger = {
-  keys() {
-    console.log("Object keys: ", Object.keys(this))
-  }
-}
+  keys(withText = true) {
+    if (withText) {
+      console.log("Object keys:", Object.keys(this));
+    }else {
+      console.log(Object.keys(this)); 
+    }
+  },
+
+  keysAndValues() {
+    Object.keys(this).forEach((key) => {
+      console.log("Key:", key);
+      console.log("Value:", this[key]);
+    });
+  },
+};
+
+// logger.keys();
+// logger.keysAndValues();
+// const bound = logger.keys.bind({ a: 1, b: 2 });
+// const bound = logger.keys.bind(person);
+// bound(false);
+// logger.keys.call(person, false);
+// logger.keys.apply(person, [false]);
