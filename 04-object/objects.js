@@ -100,12 +100,16 @@ const person = {
 
 // Sinflar va meros
 class Human {
-  isHuman = true
+  static isHuman = true;
+  humanGreet() {
+    console.log('Greet from human')
+  }
 }
 
-class Person extends Human { // Humandan meros bo'lsa
+class Person extends Human {
+  // Humandan meros bo'lsa
   constructor(name, age) {
-    super() // Ota constructor ni chaqirish funksiyasi
+    super(); // Ota constructor ni chaqirish funksiyasi
     this.name = name ?? "Undefined name"; // ?? agar name berilmagan bo'lsa
     this.age = age ?? "Undefined age";
   }
@@ -115,10 +119,11 @@ class Person extends Human { // Humandan meros bo'lsa
   }
 }
 
-const person1 = new Person('Oybek', 14);
-const person2 = new Person('Muhammadjon', 14);
+const person1 = new Person("Oybek", 14);
+const person2 = new Person("Muhammadjon", 14);
 // console.log(person1);
 // console.log(person2);
 // person1.sayHello();
 // person2.sayHello();
-console.log(person1.isHuman); 
+// console.log(person1.isHuman);
+// console.log(person.humanGreet());
