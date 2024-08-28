@@ -12,17 +12,22 @@
 const list = document.querySelector("#list");
 
 async function start() {
+  list.innerHTML = "Loading...";
   try {
     const res = await fetch("https://jsonplaceholder.typicode.com/users");
     const data = await res.json();
-    console.log(data);
+    setTimeout(() => {
+      render(data);
+    }, 2000)
   } catch (err) {
-    console.log(err);
+    list.style.color = "red";
+    list.innerHTML = 'Error: ' + err.message;
   }
 }
 
 function render(users = []) {
-  
+  const html = users.map(toHTML).join("");
+  list.innerHTML = html;
 }
 
 function toHTML(user) {
